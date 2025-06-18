@@ -1,3 +1,5 @@
+local TweenService = cloneref(game:GetService("TweenService"))
+
 local utilities = {}
 
 function utilities:Tween(instance, tweenInfo, properties, callbackData)
