@@ -106,11 +106,11 @@ function signal:Wait(self)
     local capturedArguments = nil
     local connection; connection = self:Connect(function(...)
         connection:Disconnect()
-        capturedArguments = {...}
+        capturedArguments = table.pack(...)
         task.spawn(waitingCoroutine, ...)
     end)
     coroutine.yield()
-    return unpack(capturedArguments)
+    return table.unpack(capturedArguments)
 end
 
 function signal:Once(callback)
