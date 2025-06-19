@@ -101,7 +101,7 @@ function signal:Fire(...)
     end
 end
 
-function signal:Wait(self)
+function signal:Wait()
     local waitingCoroutine = coroutine.running()
     local capturedArguments = nil
     local connection; connection = self:Connect(function(...)
