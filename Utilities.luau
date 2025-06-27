@@ -83,7 +83,7 @@ function utilities:Create(className : string) : ({[string] : any}) -> Instance
 				instance[index] = value
 			end
 		end
-		return instance
+		return clonedInstance
 	end
 end
 
